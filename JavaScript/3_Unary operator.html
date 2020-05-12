@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+</body>
+	<script type="text/javascript">
+
+		var x = 6;
+		var g = 6;
+		document.write ("переменная x = " + x);
+		document.write ("<br />");
+		document.write ("Переменная g = " + g);
+		document.write ("<br />");
+		document.write (" > " +" Больше")
+		document.write ("<br />");
+		document.write (" < " + " Меньше");
+		document.write ("<br />");
+		document.write (" == " + " Равно");
+		document.write ("<br />");
+		document.write (" != " + " Не Равно");
+		document.write ("<br />");
+		document.write ("Условный Оператор if ");
+		 if (x > g) {
+		 	var bool;
+		 	bool = true;
+		 	document.write ("<br />");
+		 	document.write (bool);
+		 	document.write ("X > G");
+		 } else if ( x <g ) {
+		 	var bool2;
+		 	bool2 = false;
+		 	document.write ("<br />");
+		 	document.write (bool2);
+		 	document.write ("X < G");
+		 } 
+		 else if (x == g) {
+		 	document.write ("<br />");
+		 	document.write ("X = G");
+		 }
+		 document.write ("<br />");
+		 var result = 44 ;
+		 
+		 document.write ("Оператор Switch CASE ");
+		 document.write ("<br />");
+		 switch (result) {
+		 	case 1:document.write("result = 1 ");
+		 	break;
+		 	case 2:document.write("result = 2 ");
+		 	break;
+		 	case 3:document.write("result = 3 ");
+		 	break;
+		 	case 4:document.write("result = 4 ");
+		 	break;
+		 	case 5:document.write("result = 5 ");
+		 	break;
+		 	case 6:document.write("result = 6 ");
+		 	break;
+		 	case 7:document.write("result = 7 ");
+		 	break;
+
+		 	default:document.write("result = " + result);
+
+		 }
+		 document.write ("<br />");
+		 var x1 = 11;
+		 var y1 = 5;
+		 var boo = true;
+		 document.write ("Оператор  (?) <Если  (:)<иначе   ");
+		 document.write ("<br />");
+		 x1>=y1 ? document.write("Yes"): document.write ("NO");
+		 document.write ("<br />");
+		 document.write (" Оператор && (...И....)");
+		 document.write ("<br />");
+		 if (x1>y1 && boo==true){
+		 	document.write ("x Больше у ");
+		 }
+		 document.write ("<br />");
+		 document.write (" Оператор || (...ИЛИ....)");
+		 document.write ("<br />");
+		  if (x1 < y1 || boo==true){
+		 	document.write ("x Больше у ");
+		 }
+	</script>
+</html>

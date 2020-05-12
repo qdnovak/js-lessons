@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+	<script type="text/javascript">
+		var arr_1 = new Array();
+		var arr_2 = new Array();
+		var arr_3 = new Array();
+		var arr_4 = new Array();
+		var arr_5 = new Array();
+		for (var i = 0; i < 5; i++) {	
+			arr_1[i]= i 
+			document.write(arr_1[i]+" ")}
+			document.write("<br />");
+		for (var i = 0; i < 10; i++) {			
+			arr_2[i]= i 
+			document.write(arr_2[i]+" ")}
+			document.write("<br />");
+		for (var i = 0; i < 15; i++) {
+			arr_3[i]= i 
+			document.write(arr_3[i]+" ")}
+			document.write("<br />");
+		for (var i = 0; i < 20; i++) {			
+			arr_4[i]= i 
+			document.write(arr_4[i]+" ")}
+			document.write("<br />");
+		for (var i = 0; i < 25; i++) {			
+			arr_5[i]= i 
+			document.write(arr_5[i]+" ")}
+			document.write("<br />");
+
+		document.write("<br />");
+		document.write("<br />");
+		var Arrs2 = new Array(arr_1,arr_2,arr_3,arr_4,arr_5);
+			
+			document.write("<br />");
+			
+
+			for (var x=0;x<Arrs2.length;x++){
+				document.write("<br /> " + "  массив № "+ x +" | ");
+					for (var j=0;j<Arrs2[x].length;j++){
+						document.write( Arrs2[x][j]+" ");	
+					}
+			}
+			document.write ("<br />" + " Количество Массивов = "+ Arrs2.length);
+		document.write ("<br />");	
+		var sum =0;
+		var Arrs3 = new Array();
+			for (var i = 0;i<12;i++){
+				var s = new Array()
+				Arrs3[i] = s;
+				document.write("<br />");
+				document.write( Arrs3.length + "массив<");				
+				for (var f = 0; f<4;f++){
+					var x = new Array();
+					Arrs3[i][f]=x;
+					document.write(  "(" + Arrs3[i].length + " массив " + ")"  );
+					for (var j= 1;j < 8 ; j++){
+						sum++;
+						Arrs3[i][f][x]=j;						
+							document.write(" "+ Arrs3[i][f][x] + " ");
+					}
+				}
+			}
+			document.write("<br />");
+			
+			
+	</script>
+</html>

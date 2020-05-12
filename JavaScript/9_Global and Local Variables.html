@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+	<script type="text/javascript">
+		var global = 123;
+		var i = 10 ;
+
+		document.write (global); 
+
+		function test  () {
+			global++;
+			var i = 5;
+			document.write("<br />");
+			document.write (i + " < Локальная переменная i (находится в функции)") 
+		}
+
+		test();
+		document.write("<br />");
+		document.write("Global =" + global + " " + " i = " + i +" < Глобальная  переменная i (находится вне функции)");
+
+	</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    let arr = new Array(2, 3, 4, 5, 6, 1, 2, 3, 54, 321);
+    text = arr.length;
+    for (let i = 0; i < arr.length; i++) {
+      document.write(arr[i] + "/");
+    }
+    document.write("<br />");
+    arr.forEach(function(item, i) {
+      //console.log(item);
+
+      document.write(item + "/");
+    });
+    //filter
+    document.write("<br />");
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] < 0) {
+        document.write(arr[i] + "/");
+      }
+    }
+    document.write("<br />");
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] > 0) {
+        document.write(arr[i] + "/");
+      }
+    }
+    let neg = arr.filter(function(element) {
+      return element > 0;
+    });
+    console.log(neg);
+    document.write("<br />");
+    document.write(neg);
+    let copyarr = [];
+    for (var i = 0; i < arr.length; i++) {
+      copyarr.push(parseInt(arr[i]));
+      document.write("|" + copyarr[i] + " ");
+    }
+
+    let numbers2 = arr.map(function(element) {
+      return parseInt(element);
+    });
+    document.write("<br />");
+    console.log(numbers2);
+    document.write(numbers2);
+
+    let allpos = true;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] < 0) {
+        allpos = false;
+        document.write(" В массиве есть Элементы меньше 0 = " + allpos);
+      }
+      if (arr[i] > 0) {
+      }
+    }
+    let pos2 = arr.every(function(element) {
+      return element >= 0;
+    });
+    document.write("<br />");
+    document.write(pos2);
+    console.log(pos2);
+
+    let sumarr = arr.reduce(function(total, element) {
+      return total + element;
+    });
+    document.write("<br />");
+    document.write("Сумма массива = " + sumarr);
+  </script>
+</html>

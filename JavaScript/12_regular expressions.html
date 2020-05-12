@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function valid(form){
+			var fail = false;
+			var name = form.name.value;
+			var password = form.password.value;
+			var repassword = form.repassword.value;
+			var state = form.state.value;
+			var mail = form.mail.value;
+
+
+			var checkmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  			
+			 if(name == "" || name ==" "){
+			 	fail = "Вы не ввели имя !";
+			}else if (password=="" || password ==" ") {
+				fail = "password is not correct !"
+			}else if (repassword != password) {
+				fail = "Пароли не совпадают";
+			}else if (state== "") {
+				fail = "Укажите ПОЛ";
+			}else if (checkmail.test(mail) == false) {
+				fail = "Вы  ввели mail не правильно";
+			}else if (checkmail.split('@').length -1 == 0) {
+				fail = "Вы  ввели mail не правильно";
+			}
+
+			 if(fail) {
+			 	alert(fail);
+			 }else
+			 	window.location = "https://www.google.com";
+			 	
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="post" name="test" id="form" >
+		<label for="mail">mail:</label>
+		<input type="text" name="mail" placeholder="mail" id="mail"/><br /><br />
+		<label for="name">Name:</label>
+		<input type="text" name="name" placeholder="Имя" id="name"/><br /><br />
+		<label for="password">password:</label>
+		<input type="text" name="password" placeholder="password" id="password"/><br /><br />
+		<label for="repassword">repassword:</label>
+		<input type="text" name="repassword" placeholder="repassword" id="repassword"/><br /><br />
+		<span>Пол</span><br /><br />
+		<label for="">Man</label>
+		<input type="radio" name="state" placeholder="state" id="state" value="Man" /><br /><br />
+		<label for="">Woman</label>
+		<input type="radio" name="state" placeholder="state" id="state" value="Woman" /><br /><br />
+		<input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Ready"/>
+	</form>
+</body>
+	
+</html>

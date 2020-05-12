@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function valid(form){
+			var fail = false;
+			var name = form.name.value;
+			var password = form.password.value;
+			var repassword = form.repassword.value;
+			var state = form.state.value;
+
+			 if(name == "" || name ==" "){
+			 	fail = "Вы не ввели имя !";
+			}else if (password=="" || password ==" ") {
+				fail = "password is not correct !"
+			}else if (repassword != password) {
+				fail = "Пароли не совпадают";
+			}else if (state== "") {
+				fail = "Укажите ПОЛ";
+
+			}
+
+			 if(fail) {
+			 	alert(fail);
+			 }else
+			 	window.location = "https://www.google.com";
+			 	
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="post" name="test" id="form" >
+		<label for="name">Name:</label>
+		<input type="text" name="name" placeholder="Имя" id="name"/><br /><br />
+		<label for="password">password:</label>
+		<input type="text" name="password" placeholder="password" id="password"/><br /><br />
+		<label for="repassword">repassword:</label>
+		<input type="text" name="repassword" placeholder="repassword" id="repassword"/><br /><br />
+		<span>Пол</span><br /><br />
+		<label for="">Man</label>
+		<input type="radio" name="state" placeholder="state" id="state" value="Man" /><br /><br />
+		<label for="">Woman</label>
+		<input type="radio" name="state" placeholder="state" id="state" value="Woman" /><br /><br />
+		<input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Ready"/>
+	</form>
+</body>
+	
+</html>

@@ -1,0 +1,11 @@
+
+@media (max-width: 991px ){
+	.infocards {
+	display: flex;
+	flex-wrap: wrap;
+	}
+	.card {
+	width: 50%;
+
+	}
+}

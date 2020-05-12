@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function click2 (button1) {
+			alert("вы нажали на кнопку !" + button1.name + "" + button1.value +" ");
+		}
+		var counter = 0;
+		function onmousecounter (element) {
+
+			counter ++;
+			element.innerHTML  = "Ты навел на этот текст ! "+counter+" раз" ;
+		} 
+	</script>
+</head>
+<body onload="alert('Страница загружена !')">
+	<input type="button" name="button1" value="Click ME!!!" onclick="click2 (this)" />
+	<select name="" id="">
+		<option value="">
+			fsdfdsf
+		</option>
+	</select>
+	<span onmouseover="onmousecounter (this)">Ты навел на этот текст ! 0 раз</span>
+</body>
+
+</html>
+!
